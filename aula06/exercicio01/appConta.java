@@ -18,7 +18,7 @@ public class appConta {
 
     }
 
-    public static void exibirOpcoes(){
+    public static void exibirOpcoes() {
         System.out.println("0 - Sair");
         System.out.println("1 - Criar Conta Normal");
         System.out.println("2 - Criar Conta Corrente");
