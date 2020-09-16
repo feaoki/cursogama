@@ -27,7 +27,7 @@ public class appConta {
         System.out.println("5 - Consultar Dados Conta");
         System.out.println("6 - Depositar");
         System.out.println("7 - Sacar");
-        System.out.println("8 - Exibir opcoes novamente");
+        System.out.println("100 - Exibir opcoes novamente");
     }
     
 }
