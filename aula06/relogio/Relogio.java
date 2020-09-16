@@ -1,6 +1,10 @@
 package relogio;
 
 public class Relogio {
+
+    public static final String HORA_INVALIDA = "Hora recebida invalida";
+    public static final String MIN_INVALIDA = "Minuto recebida invalida";
+    public static final String SEG_INVALIDA = "Segundo recebida invalida";
     private int hora;
     private int minuto;
     private int segundo;
@@ -20,23 +24,25 @@ public class Relogio {
     }
 
     public int getSegundo(){
-        return this.minuto;
+        return this.segundo;
     }
 
-    private setHora(int hora){
+    private void setHora(int hora){
         if (hora > 23 && hora < 0) {
-            System.out.println("Hora recebida invalida");
+            System.out.println(HORA_INVALIDA);
         }
     }
 
-    private setMinuto(int minuto){
+    private void setMinuto(int minuto){
         if (hora > 59 && hora < 0) {
-            System.out.println("Hora recebida invalida");
+            System.out.println(MIN_INVALIDA);
         }
     }
 
-    private setSegundo(int segundo){
+    private void setSegundo(int segundo){
         if (hora > 59 && hora < 0) {
-            System.out.println("Hora recebida invalida");
+            System.out.println(SEG_INVALIDA);
         }
     }
+
+}

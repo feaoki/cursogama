@@ -1,7 +1,7 @@
 package exercicio01;
 
 public class ContaCorrente extends Conta{
-    final double TAXA_DEPOSITO = 0.1d;
+    static final double TAXA_DEPOSITO = 0.1d;
 
     public ContaCorrente(int numero) {
         super(numero);
@@ -13,10 +13,12 @@ public class ContaCorrente extends Conta{
     }
 
     @Override
-    public boolean sacar(souble valor){
+    public boolean sacar(double valor){
         if (getSaldo() >= valor) {
-            super.sacar(valor);
-        } 
+            return super.sacar(valor);
+        } else {
+            return false;
+        }
     }
 
 }

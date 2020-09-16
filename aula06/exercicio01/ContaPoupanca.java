@@ -2,28 +2,28 @@ package exercicio01;
 
 public class ContaPoupanca extends Conta{
 
-    // static pois a taxa servira para todas as contas
     private static double taxa;
 
-    public ContaPoupanca(int numero) {
+    public ContaPoupanca(int numero){
         super(numero);
     }
 
-    public static void alteraTaxa(double taxaNova) {
+    protected static void setTaxa(double taxaNova){
         taxa = taxaNova;
     }
 
-    public static double getTaxa() {
-        return taxa;
+    protected static double getTaxa(){
+        return  taxa;
     }
 
     @Override
     public boolean sacar(double valor) {
-        if (getSaldo() - (valor + getTaxa()) {
-            return super.sacar(saldo)
+        if (getSaldo() >= valor + getTaxa()) {
+            return super.sacar(valor + getTaxa());
         } else {
             return false;
         }
     }
+    
     
 }

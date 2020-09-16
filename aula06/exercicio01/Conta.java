@@ -18,7 +18,7 @@ public class Conta {
         return this.numero;
     }
 
-    public String consultarDadosConta() {
+    public String exibir() {
         return getNumero() + ": " + getSaldo();
     }
 
@@ -28,7 +28,7 @@ public class Conta {
         }
     }
 
-    public boolean sacar(double saldo){
+    public boolean sacar(double valor){
         if (valor > 0) {
             this.saldo -= valor;
             return true;
